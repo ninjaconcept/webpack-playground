@@ -45,7 +45,8 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(1);
-	document.write(__webpack_require__(5));
+
+	//require('./style/vendor/semantic-ui/dist/semantic.css');
 
 
 /***/ },
@@ -64,8 +65,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./node_modules/css-loader/index.js!./node_modules/sass-loader/index.js!./style.scss", function() {
-				var newContent = require("!!./node_modules/css-loader/index.js!./node_modules/sass-loader/index.js!./style.scss");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./../../node_modules/postcss-loader/index.js!./main.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./../../node_modules/postcss-loader/index.js!./main.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -83,7 +84,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n  background: yellow; }\n", ""]);
+	exports.push([module.id, "body {\n  background: red; }\n", ""]);
 
 	// exports
 
@@ -396,13 +397,6 @@
 		if(oldSrc)
 			URL.revokeObjectURL(oldSrc);
 	}
-
-
-/***/ },
-/* 5 */
-/***/ function(module, exports) {
-
-	module.exports = "It works from content.js.";
 
 
 /***/ }

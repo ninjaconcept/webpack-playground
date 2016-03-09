@@ -11,13 +11,17 @@ module.exports = {
         saveDev: true
       })
     ],
-    entry: "./entry.js",
+    entry: "./src/index.js",
     output: {
         path: __dirname + "/dist",
         filename: "bundle.js"
     },
     module: {
         loaders: [
+            {
+              test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+              loader: 'url-loader?limit=100000'
+            },
             // CSS
             {
               test: /\.css$/,
