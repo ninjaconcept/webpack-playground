@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	//require("!style!css!./style.css");
+	//https://webpack.github.io/docs/tutorials/getting-started/
 	__webpack_require__(1);
 	document.write(__webpack_require__(5));
 
@@ -85,7 +85,7 @@
 
 
 	// module
-	exports.push([module.id, "body {\n    background: blue;\n}\n", ""]);
+	exports.push([module.id, "body {\n    background: green;\n}\n", ""]);
 
 	// exports
 
