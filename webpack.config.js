@@ -1,5 +1,9 @@
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
 
+var autoprefixer = require('autoprefixer');
+var precss       = require('precss');
+
+
 module.exports = {
     plugins: [
       new NpmInstallPlugin({
@@ -17,13 +21,17 @@ module.exports = {
             // CSS
             {
               test: /\.css$/,
-              loader: "style!css"
+              loader: "style!css!postcss-loader"
             },
             // SASS
             {
               test: /\.scss$/,
-              loader: 'style!css!sass'
+              loader: 'style!css!sass!postcss-loader'
             }
         ]
+    },
+    postcss: function () {
+        return [autoprefixer, precss];
     }
+
 };
