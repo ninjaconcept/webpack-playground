@@ -1,4 +1,5 @@
-require('./style/vendor/semantic-ui/dist/semantic.css');
+require('semantic-ui/dist/semantic.css')
+require('semantic-ui/dist/semantic.js')
 require("./style/main.scss");
 
 import React from 'react';
