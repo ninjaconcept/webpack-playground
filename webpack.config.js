@@ -2,6 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 
 const NpmInstallPlugin = require('npm-install-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var autoprefixer = require('autoprefixer');
 var precss       = require('precss');
@@ -12,6 +13,15 @@ module.exports = {
       new NpmInstallPlugin({
         save: true,
         saveDev: true
+      }),
+      new HtmlWebpackPlugin({
+        template: './src/index.html',
+        hash: false,
+        filename: 'index.html',
+        inject: 'body',
+        minify: {
+          collapseWhitespace: true
+        }
       })
     ],
     entry: "./src/index.js",

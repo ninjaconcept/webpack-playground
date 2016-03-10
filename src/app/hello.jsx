@@ -17,4 +17,4 @@ class Hello extends React.Component {
   }
 }
 
-ReactDOM.render(<Hello/>, document.body);
+export default Hello
