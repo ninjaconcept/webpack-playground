@@ -7,7 +7,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 var autoprefixer = require('autoprefixer');
 var precss       = require('precss');
 
-
 module.exports = {
     plugins: [
       new NpmInstallPlugin({
@@ -22,6 +21,11 @@ module.exports = {
         minify: {
           collapseWhitespace: true
         }
+      }),
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+        "window.jQuery": "jquery"
       })
     ],
     entry: "./src/index.js",

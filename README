@@ -1,16 +1,11 @@
-https://webpack.github.io/docs/tutorials/getting-started/
+install nvm
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
 
 
-webpack --progress --colors --watch
+  nvm use
+  npm install
+  npm start
 
-npm install webpack-dev-server -g
-
-webpack-dev-server --progress --colors
-
->> http://localhost:8080/webpack-dev-server/index.html
-
-
-https://webpack.github.io/docs/configuration.html
-
-
-http://survivejs.com/webpack_react/developing_with_webpack/
+  open http://localhost:8080/webpack-dev-server/
+  or
+  open http://localhost:8080/webpack-dev-server/index.html
